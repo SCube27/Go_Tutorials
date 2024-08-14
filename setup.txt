@@ -1,0 +1,6 @@
+# For Setting up a GO project:
+
+1. Create a directory ```mkdir <directory_name>```
+2. ```cd <directory_name>```
+3. Create a modules file for GO inside the directory ```go mod init <module_name>```
+4. Start creating your files and writing code
