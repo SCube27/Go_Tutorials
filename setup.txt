@@ -4,3 +4,11 @@
 2. ```cd <directory_name>```
 3. Create a modules file for GO inside the directory ```go mod init <module_name>```
 4. Start creating your files and writing code
+
+# Short Notes:
+
+PACKAGES:
+1. In GO there are no classes rather we use packages to write files. Every file should contain a package name in their header, that indicates this particular file belongs to this particular package.
+2. The main package is a special package in GO, an executable program should contain a main package.
+3. [IMP] In GO, in a single directory all files should be under same package, this means in a directory if a file already contains a package main, then we can't create a new file with another package.
+4. We created a utils folder, it contains a file with package name 'myutil' so now all the files in this folder should be under package myutil.
