@@ -20,6 +20,11 @@ VARIABLES:
 4. Variables that are defined using const keyword will have a constant value and their values won't change. So once assigned their values can't be reassigned in the same file. (Same like JavaScript)
 5. [IMP] We can also declare a variable without its type (var, const) and without its datatype using the `:=` operator. This is usually used when taking and storing a value from a called function.
 
+PRINT STATEMENTS:
+1. Println() : This function is usually adds a space between print string and variables being printed. Besides it also assumes new Println() function will print on new line, so everytime an new Println() function will be added in the code it will be printed on a new line.
+2. Printf() : This function is usually used for formatting strings present in it, in user specific way using format specifiers (%d for specifying integers, %f for float values, %T for type of variables, %s for strings). This function doesnt do anything on its own, even to move the cursor to the next line we've to specify here '\n'. So even if there are multiple Printf() lines in the code they'll be printed in the same line if not specified.
+3. The format specifiers are basically represent the associated variables passed in the function, these specifiers are replaced by the variables during the compile time.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
