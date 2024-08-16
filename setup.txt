@@ -12,3 +12,14 @@ PACKAGES:
 2. The main package is a special package in GO, an executable program should contain a main package.
 3. [IMP] In GO, in a single directory all files should be under same package, this means in a directory if a file already contains a package main, then we can't create a new file with another package.
 4. We created a utils folder, it contains a file with package name 'myutil' so now all the files in this folder should be under package myutil.
+
+VARIABLES:
+1. In GO, variables are defined by the var keyword followed by their name and datatype of the variable, this can be showed as ```var name string = "Sahil"```
+2. We can also store variables without defining its datatype, which later on during compile time will be automatically assumed by the GO compiler, this is as follows ```var name = "Sahil"```
+3. [IMP] In the first case the variable is declared to be a string and hence no other kind of data can be stored in it, on the other hand in the second case the variable is kept on an open end so it has no definite datatype and hence its datatype can be changed whenever required.
+4. Variables that are defined using const keyword will have a constant value and their values won't change. So once assigned their values can't be reassigned in the same file. (Same like JavaScript)
+5. [IMP] We can also declare a variable without its type (var, const) and without its datatype using the `:=` operator. This is usually used when taking and storing a value from a called function.
+
+# EXTRAS:
+1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
+2. A module is the name of the project and under it comes all other packages and files.
