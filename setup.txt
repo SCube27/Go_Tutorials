@@ -25,6 +25,15 @@ PRINT STATEMENTS:
 2. Printf() : This function is usually used for formatting strings present in it, in user specific way using format specifiers (%d for specifying integers, %f for float values, %T for type of variables, %s for strings). This function doesnt do anything on its own, even to move the cursor to the next line we've to specify here '\n'. So even if there are multiple Printf() lines in the code they'll be printed in the same line if not specified.
 3. The format specifiers are basically represent the associated variables passed in the function, these specifiers are replaced by the variables during the compile time.
 
+USER INPUTS:
+1. To read the inputs from the user, for a normal program we usually use the Scan() method from the `fmt` package.
+2. We can declare a variable and insert the console input into that variable using the Scan() method, as it scans for input in the console.
+3. The problem with the Scan() is that is only reads a string either until it's end or if it reaches a whitespace so the strings like "Roronoa Zoro" won't work.
+4. For this we can use the NewReader() function from the bufio package. 
+5. This creates a new buffered reader that reads through the console or standard input (Stdin this function is in the os package). 
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
+3. A buffered Reader is a type of reader that reads from an underlying source, such as a file or a standard input (keyboard) and stores that in a buffer.
+4. A buffer is a temporary storage area in the memory. Buffered Reader are usually used to improve the efficiency of the input operations.
