@@ -55,8 +55,18 @@ ERROR HANDLING:
 6. We can also use a normal variable named `err` too instead of `_` but then the program would suggest to use it which isn't the case in `_` identifier.
 7. For dedicated errors present in the function using `error` data type (inbuilt Golang datatype) is recommended to the users. Such errors can be returned using the `Errorf()` method of `fmt` package.
 
+ARRAYS:
+1. The declaration of arrays in Golang is same as declaration of variables.
+2. The simple difference is we define a pair of square brackets `[]` and size of array in them before the datatype of the array.
+For e.g ``` var langs [5]string ```
+3. To initialize the array we create a variable and define its size, data type and contents in `{}`
+For e.g ``` var numbers = [5]int {1,2,3,4,5} ```
+4. We've a `len()` function in Golang to check for the length of the array passed in it.
+5. The default values for an array while declaring it, for int it would be 0, for string it would be "", for bool it would be false, for pointers it would be nil.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
 3. A buffered Reader is a type of reader that reads from an underlying source, such as a file or a standard input (keyboard) and stores that in a buffer.
 4. A buffer is a temporary storage area in the memory. Buffered Reader are usually used to improve the efficiency of the input operations.
+5. A `%q` format specifier is used to show quoted string. Generally strings are represented without qoutes. This specifier represents strings wrapped around qoutes.
