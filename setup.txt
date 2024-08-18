@@ -44,6 +44,16 @@ FUNCTIONS:
     ```
 5. In above example all the numbers are of same types.
 6. If we declare a named variable in the return type then we don't need to specify the variable while returning, only return statement works.
+7. If a function has multiple return types then we can declare them inside parenthesis after the parameters.
+
+ERROR HANDLING:
+1. [IMP] The error handling in GO can be done using returning multiple datatypes from the function, one will be the functions general return type and other would be the error to be returned.
+2. This means while returning any vaule from the function either it is a normal case or an error case, we return multiple values. One will be the actual output and other would be the error to be returned.
+3. In normal case where there are no errors, we can return `nil` instead of error, representing no error.
+4. [IMP] Now when, calling such functions and storing the values in the variables there are multiple values incoming which means they can't be stored in a single variable. For this we use the underscore (_) identifier alongside the normal variable.
+5. The underscore variable represents values that are not so important and can be ignored and discarded. Since error is incoming which is of no longer use in the further functioning of program we store it in `_` so it's discarded.
+6. We can also use a normal variable named `err` too instead of `_` but then the program would suggest to use it which isn't the case in `_` identifier.
+7. For dedicated errors present in the function using `error` data type (inbuilt Golang datatype) is recommended to the users. Such errors can be returned using the `Errorf()` method of `fmt` package.
 
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
