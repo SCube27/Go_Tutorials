@@ -64,6 +64,17 @@ For e.g ``` var numbers = [5]int {1,2,3,4,5} ```
 4. We've a `len()` function in Golang to check for the length of the array passed in it.
 5. The default values for an array while declaring it, for int it would be 0, for string it would be "", for bool it would be false, for pointers it would be nil.
 
+SLICES:
+1. In Go, a slice is a flexible and dynamic data structure, that is a powerful alternative to the normal arrays just like vectors in C++.
+2. Unlike arrays slices are dynamic and their sizes can be changed during the program's execution.
+3. A slice is declared in the same way as an array in the following format : ```numbers := []int{1,2,3,4,5}```
+4. Basically we don't define the size in the square brackets `[]` while declaring a slice.
+5. We can create a slice using the ```make``` function too. We just have to pass the size and capacity of the slice we want to make. Before showing the implementation lets know what is the size of a slice and what is capacity.
+6. [IMP] In simple words, the size of the slice is the spaces of the slice used while the capacity of the slice is the actual number of elements it can store. Basically if a slice can store 5 elements then its capacity would be 5, but it has stored only 3 elements hence its size would be 3.
+7. [IMP] If we try to store the data beyond the capacity of a slice then its capacity is dunamically doubled.
+8. We use the cap() function to find the capacity of a slice while len() function to find the size/length of the slice.
+9. The syntax to create a slice using make() : ```numbers = make([]int, 3, 5)``` -> datatype, size, capacity
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
