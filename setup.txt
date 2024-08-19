@@ -75,6 +75,19 @@ SLICES:
 8. We use the cap() function to find the capacity of a slice while len() function to find the size/length of the slice.
 9. The syntax to create a slice using make() : ```numbers = make([]int, 3, 5)``` -> datatype, size, capacity
 
+IF-ELSE CONDITIONALS:
+1. The standard if-else. Is is written in strictly following format
+E.g ```
+    if x == 10 {
+        // print smthg
+    } else {
+        // print smthg
+    }
+```
+2. Else should always start at the line where if ends.
+3. Same goes for ```else if``` statement.
+4, We dont put parenthesis during writing the conditions in if-else in GO.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
