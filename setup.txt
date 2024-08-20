@@ -88,6 +88,11 @@ E.g ```
 3. Same goes for ```else if``` statement.
 4, We dont put parenthesis during writing the conditions in if-else in GO.
 
+SWITCH CASE:
+1. In the switch case, we've multiple cases (same as the conditions in if-else) just same as any other language.
+2. Here we can add multiple values in a single case to check, if the value matches any of the values of a single case then that particular case is triggered.
+3. Similarly we can also add expressions in switch case such as >=, >, <=, < etc.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
