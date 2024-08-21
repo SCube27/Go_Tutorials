@@ -93,6 +93,12 @@ SWITCH CASE:
 2. Here we can add multiple values in a single case to check, if the value matches any of the values of a single case then that particular case is triggered.
 3. Similarly we can also add expressions in switch case such as >=, >, <=, < etc.
 
+FOR LOOPS:
+1. In Golang we just have for loops, we dont have while or any other kind of loops in Golang.
+2. The loop is written same as we write in any other language.
+3. We can implement the for loop over an iterable object such as array, slice, strings etc using ```range``` keyword to implement in simple and easier manner.
+
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
