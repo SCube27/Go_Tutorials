@@ -109,6 +109,12 @@ MAPS:
 8. [IMP] If we access a key from the map, it returns two values, a. The value it is associated with, b. if the key exists in the map (true or false)
 9. The map keeps an unordered way of storing the values, hence we won't get values in the same order always also the size of the map is dynamic and hence many values can be stored in it.
 
+STRUCT:
+1. In GO, a struct (short form for structure) is a composite datatype that stores multiple variables (fields or members) under a single name.
+2. Each field (variable) inside the struct can have a different datatype, and structs can be used to develop complex data structures.
+3. There are three separate methods through which we can create a struct data structure.
+4. [VERY IMP] We can create a complex structure to store end to end data of anything. Like in code we've created a complex data structure to store the employee details. Where we created a struct to store the data members that are struct themselves.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
