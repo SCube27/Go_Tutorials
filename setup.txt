@@ -115,6 +115,11 @@ STRUCT:
 3. There are three separate methods through which we can create a struct data structure.
 4. [VERY IMP] We can create a complex structure to store end to end data of anything. Like in code we've created a complex data structure to store the employee details. Where we created a struct to store the data members that are struct themselves.
 
+POINTERS:
+1. In Go, the pointers are variables that store the address of other variables in themselves. They are indirectly used to refer to the value stored in a variable rather than the value itself.
+2. They provide a way to work with the memory directly to do memory efficient tasks such as memory management and sharing the ddta between functions.
+3. A pointer is declared as following ```var ptr *int```, so we use a * with the data type while making the pointer. Now this pointer can only point to a variable of type int. 
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
