@@ -120,6 +120,9 @@ POINTERS:
 2. They provide a way to work with the memory directly to do memory efficient tasks such as memory management and sharing the ddta between functions.
 3. A pointer is declared as following ```var ptr *int```, so we use a * with the data type while making the pointer. Now this pointer can only point to a variable of type int. 
 
+STRINGS:
+1. The strings package in Go provides a variety of functions for manipulating strings.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
