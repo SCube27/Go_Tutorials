@@ -127,6 +127,11 @@ TIME:
 1. Go provides the time package for handling time and time related operations.
 2. The time format that is followed in the Golang is "YYYY-MM-DD HH:mm:ss" so for example "2006-01-02 15:04:05" this can be said in other words as "2 January 2006 3 hours 4 minutes 5 seconds".
 
+DEFER:
+1. The defer keyword in the GO, if used before a statement in the function then that statement associated with the defer keyword will be executed at the last of the program.
+2. Once all the statements in the function are executed then the statement with the defer keyword will be executed just before the ending of the statement.
+3. [IMP] If there are multiple statements in a function with the defer keyword, then the statements are pushed inside a call stack. These statements will be executed in a LIFO manner.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
