@@ -132,6 +132,11 @@ DEFER:
 2. Once all the statements in the function are executed then the statement with the defer keyword will be executed just before the ending of the statement.
 3. [IMP] If there are multiple statements in a function with the defer keyword, then the statements are pushed inside a call stack. These statements will be executed in a LIFO manner.
 
+FILE HANDLING:
+1. File handling in GO, is done using various inbuilt packages present along with the language.
+2. The `os` package is used to do all the operations and stuff related to OS. It provides most of the command line statements to execute various processes in the program.
+3. The `io` package is used to implement all the input and output related tasks, from reading & writing files to creating buffers etc.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
