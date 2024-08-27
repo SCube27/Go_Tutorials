@@ -137,6 +137,10 @@ FILE HANDLING:
 2. The `os` package is used to do all the operations and stuff related to OS. It provides most of the command line statements to execute various processes in the program.
 3. The `io` package is used to implement all the input and output related tasks, from reading & writing files to creating buffers etc.
 
+WEB REQUESTS
+1. A web request is a http request that is made over internet to send and receive data in the form of json / http docs.
+2. In GO, we can make http (web) requests using the native `net/http` package (same as http module in JavaScript), which provides functions to make and send http requests, and handle the responses.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
