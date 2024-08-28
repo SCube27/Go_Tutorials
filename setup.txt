@@ -144,6 +144,10 @@ WEB REQUESTS:
 URL HANDLING:
 1. In GO, the `net/url` package provides the functionalities to parse, construct and manipulate URLs. URLs are used to identify resources on the internet such as web pages, images and files.
 
+JSON:
+1. In GO, the `encoding/json` package is used encode and decode JSON strings (JavaScript Object Notation).
+2. In GO, there are two terms related to JSON usage and manipulation. Marshaling which means converting a Go native struct in a JSON object. Unmarshaling which means converting a JSON encoded byte into a GO struct
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
