@@ -3,7 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"net/http"
+	"strings"
 )
 
 type Todo struct {
@@ -13,7 +15,7 @@ type Todo struct {
 	Completed bool   `json:"completed"`
 }
 
-func main() {
+func getRequest() {
 	fmt.Println("Learning CRUD...")
 
 	res, err := http.Get("https://jsonplaceholder.typicode.com/todos/1")
@@ -47,4 +49,52 @@ func main() {
 	}
 
 	fmt.Println("Todo Task:", todo)
+}
+
+func postRequest() {
+	todo := Todo{
+		UserId:    21,
+		Title:     "Complete all the tasks",
+		Completed: false,
+	}
+
+	// convert the todo in JSON format for sending the post request
+	jsonData, err := json.Marshal(todo)
+
+	if err != nil {
+		fmt.Println("Error occured while marshaling", err)
+		return
+	}
+
+	// convert the jsonData(byte slice) to string
+	jsonString := string(jsonData)
+
+	// converting the jsonString to reader as the post method requires a reader object
+	jsonReader := strings.NewReader(jsonString)
+
+	url := "https://jsonplaceholder.typicode.com/todos"
+
+	// calling the post method
+	res, err := http.Post(url, "application/json", jsonReader)
+
+	if err != nil {
+		fmt.Println("Error occured while reading response", err)
+		return
+	}
+
+	// reading the http response object and converting it in byte slice
+	data, err := ioutil.ReadAll(res.Body)
+
+	if err != nil {
+		fmt.Println("Error occured while reading http response", err)
+		return
+	}
+
+	fmt.Println("Response Status:", res.Status)
+	fmt.Println("Response:", string(data)) // converting the byte slice in string
+}
+
+func main() {
+	getRequest()
+	postRequest()
 }
