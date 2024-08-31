@@ -139,9 +139,39 @@ func updateRequest() {
 	fmt.Println("Response Data:", string(resData))
 }
 
+func deleteRequest() {
+	url := "https://jsonplaceholder.typicode.com/todos/1"
+
+	req, err := http.NewRequest("DELETE", url, nil)
+
+	if err != nil {
+		fmt.Println("Error while creating request", err)
+		return
+	}
+
+	client := http.Client{}
+	res, err := client.Do(req)
+
+	if err != nil {
+		fmt.Println("Error while getting response", err)
+		return
+	}
+
+	resData, err := ioutil.ReadAll(res.Body)
+
+	if err != nil {
+		fmt.Println("Error while reading response", err)
+		return
+	}
+
+	fmt.Println("Response Status:", res.Status)
+	fmt.Println("Response Data:", string(resData))
+}
+
 func main() {
 	fmt.Println("Learning CRUD...")
-	// getRequest()
-	// postRequest()
+	getRequest()
+	postRequest()
 	updateRequest()
+	deleteRequest()
 }
