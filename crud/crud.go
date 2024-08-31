@@ -16,8 +16,6 @@ type Todo struct {
 }
 
 func getRequest() {
-	fmt.Println("Learning CRUD...")
-
 	res, err := http.Get("https://jsonplaceholder.typicode.com/todos/1")
 
 	if err != nil {
@@ -94,7 +92,56 @@ func postRequest() {
 	fmt.Println("Response:", string(data)) // converting the byte slice in string
 }
 
+func updateRequest() {
+	todo := Todo{
+		UserId:    26,
+		Title:     "Be Consistent!",
+		Completed: true,
+	}
+
+	url := "https://jsonplaceholder.typicode.com/todos/1"
+
+	jsonData, err := json.Marshal(todo)
+
+	if err != nil {
+		fmt.Println("Error occured while marshaling", err)
+		return
+	}
+
+	jsonString := string(jsonData)
+	jsonReader := strings.NewReader(jsonString)
+
+	req, err := http.NewRequest("PUT", url, jsonReader) // creating a new request to send
+
+	if err != nil {
+		fmt.Println("Error occured in PUT Request", err)
+		return
+	}
+
+	req.Header.Set("Content-type", "application/json") // setting the headers
+
+	// send the request
+	client := http.Client{}
+	res, err := client.Do(req)
+	if err != nil {
+		fmt.Println("Error occured while sending request", err)
+		return
+	}
+	defer res.Body.Close()
+
+	resData, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		fmt.Println("Error occured while reading response", err)
+		return
+	}
+
+	fmt.Println("Rsponse Status:", res.Status)
+	fmt.Println("Response Data:", string(resData))
+}
+
 func main() {
-	getRequest()
-	postRequest()
+	fmt.Println("Learning CRUD...")
+	// getRequest()
+	// postRequest()
+	updateRequest()
 }
