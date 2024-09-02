@@ -148,6 +148,20 @@ JSON:
 1. In GO, the `encoding/json` package is used encode and decode JSON strings (JavaScript Object Notation).
 2. In GO, there are two terms related to JSON usage and manipulation. Marshaling which means converting a Go native struct in a JSON object. Unmarshaling which means converting a JSON encoded byte into a GO struct
 
+GOROUTINES:
+1. Let's first understand what is concurrency and what is parallelism while running tasks or programs.
+2. Concurrency: 
+    - Concurrency is the process in which, there is a single task executor that implements multiple tasks, based on their priority in different timeframes. 
+    - For e.g If there are 3 tasks at hand, then it will execute task 1 for some time, then task 3 then again task 1 then task 2. - This goes on until all the tasks are completed. This process is called concurrency.
+3. Parallelism:
+    - Parallelism is a processs in which, there might be muitiple tasks executors that take a task and run them parallely by each other.
+    - For e.g If there are 3 tasks and there are 3 processes then each of them would take a single task and run parallely trying to complete the task.
+    - The processes run until the task at their hand is completed. This is called parallelism.
+4. All this is handled by the scheduler present in the computer. It checks how many tasks are at the hand and how many processing units are present and based on it, the scheduler carries out any of the above process.
+5. In essence, concurrency is a way to structure your program in to make efficient use of the available resources, allowing the tasks to overlap in time. Parallelism on the other hand is about executing the tasks simultaneously to speed up the overall execution.
+6. Goroutines are a key feature in GO programming language that allows the functions to run concurrently or parallely with other parts of the program.
+7. We can make functions run concurrently using the `go` keyword. So the functions calls having go keyword infront of them are running by themselves while the remaining function is being executed.
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
