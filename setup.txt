@@ -162,6 +162,11 @@ GOROUTINES:
 6. Goroutines are a key feature in GO programming language that allows the functions to run concurrently or parallely with other parts of the program.
 7. We can make functions run concurrently using the `go` keyword. So the functions calls having go keyword infront of them are running by themselves while the remaining function is being executed.
 
+SYNC WAITGROUP:
+1. The `sync.WaitGroup` is a synchronization primitive in GO that is used to wait for a collection of goroutines to finish their execution.
+2. It allows you to coordinate the execution of multiple goroutines and ensure that they all complete their execution before continuing with the rest of the program.
+3. 
+
 # EXTRAS:
 1. For a function, variable etc to be exported in another file its initial should always be in Capital (Uppercase)
 2. A module is the name of the project and under it comes all other packages and files.
