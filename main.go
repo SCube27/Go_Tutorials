@@ -17,7 +17,7 @@ func main() {
 	var money int = 700000000
 	fmt.Println(money)
 
-	var dimensions float64 = 26.21
+	var dimensions float64 = 27.21
 	fmt.Println(dimensions)
 
 	var decision bool = true
